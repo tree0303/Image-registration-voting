@@ -1,0 +1,90 @@
+fieldset.inform{
+    display: none;
+}
+.btn1{
+    font-size :30px;
+    display: inline-block;
+    max-width: 180px;
+    text-align: left;
+    border: 2px solid #9ec34b;
+    color: #9ec34b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 32px;
+    border-radius: 4px;
+    transition: .4s;
+    position: relative;
+    right: 10%;
+}
+.btn1:hover {
+    background-color: #9ec34b;
+    border-color: #cbe585;
+    color: #FFF;
+}
+
+legend{
+    font-size: 40px;
+    text-align: center;
+    margin: 30px;
+}
+
+div.main{
+    width: 650px;
+    text-align: center;
+    margin-right: auto;
+    margin-left : auto;
+    border: 4px solid;
+    font-size: 20px;
+}
+fieldset img{
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+fieldset section{
+    font-size: 20px;
+    display: flex;
+    width: 620px;
+    margin: 15px;
+    border-bottom: 0.5px rgba(255, 42, 42, 0.3) solid;
+    margin-bottom: 30px;
+}
+fieldset section div.ele{
+    float: left;
+    width: 180px;
+    text-align: right;
+    margin-right: 10px;
+}
+fieldset section div.con{
+    float: right;
+    width: 410px;
+    text-align: left;
+    margin-left: 10px;
+}
+.btn1{
+    left: 3%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+/*========= particle js を描画するエリア設定 ===============*/
+
+canvas {
+    display: block;
+  }
+  #particles-js{ 
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: 98.8%;
+    height: 110%;
+    background-color: rgb(191, 253, 253);
+    top: -10px;
+  }
+  
+  #wrapper{
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width:100%;
+    height: 100%;
+    
+  }

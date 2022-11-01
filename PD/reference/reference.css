@@ -1,0 +1,342 @@
+nav.head{
+  margin-top: -10px;
+  padding-top: 10px;
+  background-color: white;
+}
+.menu {
+    background-color: white;
+    display: table;
+	list-style-type:none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+.menu li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    }
+.menu >li{
+    display:table-cell;
+    min-width: 50px;
+    width: 25%;
+    
+    border-left:1px whitesmoke solid;
+    border-right: 1px whitesmoke solid;
+    border-radius: 10px;
+}
+.menu > li.current {
+	position:relative;
+    background-color: #DEEBF7;
+}
+.menu > li.current > ul {
+	display:none;
+}
+.menu > li.current:hover ul {
+	display:block;
+	position:absolute;
+	padding:0;
+	margin:0;
+	left:0;
+	list-style-type:none;
+  width: 100%;
+  
+}
+.menu>li.current:hover>ul.second>li{
+  border-left:1px whitesmoke solid;
+  border-right: 1px whitesmoke solid;
+  border-radius: 10px;
+  background-color: #fad8fdd0;  
+}
+.menu>li:hover{
+    background-color: #FFF2CC;
+}  
+.menu>li.current:hover>ul.second>li:hover{
+    background-color: #FFF2CC;
+}
+i.down {
+    display: inline-block;
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    border: 0px;
+    border-top: solid 2px #555;
+    border-right: solid 2px #555;
+    transform: rotate(135deg);
+  }
+/*ここから上はヘッダー*/
+
+
+    .spot {
+        width: 1000px;
+        background-color: rgb(255, 255, 255);
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 5px;
+        border: solid 6px rgba(122, 112, 112, 0.699);
+        display: flex;
+    }
+    
+    .spot > img {
+        width: 300px;
+        height: auto;
+        margin: 33px;
+    }
+    .story h2{
+        font-size: large;
+        margin-bottom: 0px;
+        margin-top: 33px;
+    }
+    
+    .tourist-wrapper {
+      margin-bottom: 80px;
+    }
+    
+    .title h2{
+        margin-top: 0;
+        text-align: center;
+        padding-top: 60px;
+        font-size: 50px;
+        margin-bottom: 70px;
+    }
+    
+    .story p{
+      margin-top: 5px;
+      margin-right: 33px;
+    }
+    
+    .buttom {
+      float: right;
+      height: 70px;
+      width: auto;
+      margin-top: 15px;
+      margin-right: 15px;
+    }
+    .buttom:hover{
+        height: 75px;
+    }
+/*========= particle js を描画するエリア設定 ===============*/
+
+canvas {
+    display: block;
+  }
+  #particles-js{ 
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: 98.8%;
+    height: 110%;
+    background-color: rgb(191, 253, 253);
+    margin: 0;
+    top: -10px;
+  }
+  
+  #wrapper{
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width:100%;
+    height: 100%;
+  }
+/*========= ページトップのためのCSS ===============*/
+
+/*リンクの形状*/
+#page-top a{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background:#942D2F;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; 
+    text-decoration: none;
+    font-size:0.6rem;
+    transition:all 0.3s;
+    right: 10px;
+  }
+  
+  #page-top a:hover{
+    background: #777;
+  }
+  
+/*リンクを右下に固定*/
+#page-top {
+	position: fixed;
+	right: 10px;
+	bottom:10px;
+	z-index: 2;
+    /*はじめは非表示*/
+	opacity: 0;
+	transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(100px);
+  }
+}
+#footer{
+    position: relative;
+    z-index: 2;
+  }
+small{
+    background:#333;
+    color:#fff;
+    display: block;
+    text-align: center;
+    padding:20px;
+  }
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position:fixed;
+  z-index: 999;
+  /*ナビのスタート位置と形状*/
+top:0;
+  right: -20%;
+width:20%;
+  height: 100vh;/*ナビの高さ*/
+background:rgba(207, 255, 209, 0.747);
+  /*動き*/
+transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+  right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999; 
+  width: 20%;
+  height: 100vh;/*表示する高さ*/
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+  display: block;
+  list-style: none;
+  text-align: center;
+  overflow: hidden;
+  width: 80%;
+}
+#g-nav li:hover{
+  background-color: rgba(141, 247, 241, 0.74);
+}
+#g-nav li a{
+color: #333;
+text-decoration: none;
+padding:10px;
+display: block;
+letter-spacing: 0.1em;
+font-weight: bold;
+overflow: hidden;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1{
+position:fixed;
+  z-index: 9999;/*ボタンを最前面に*/
+top:5px;
+right: 10px;
+cursor: pointer;
+  width: 50px;
+  height:50px;
+}
+
+/*×に変化*/  
+.openbtn1 span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+background-color: #666;
+  width: 45%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+top:31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+

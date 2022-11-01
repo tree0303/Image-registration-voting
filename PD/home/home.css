@@ -1,0 +1,372 @@
+nav.head{
+  background-color: white;
+  margin-top: -10px;
+  padding-top: 10px;
+}
+nav.head ul{
+    background-color: white;
+    z-index: 30;
+    display: table;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+    }
+    nav.head ul li{
+    display: table-cell;
+    min-width: 30px;
+    width: 15%;
+    
+    border-left:1px whitesmoke solid;
+    border-right: 1px whitesmoke solid;
+    border-radius: 10px;
+    }
+    nav.head ul li a{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    }
+    nav.head ul li.current{
+    background-color: #DEEBF7;
+    }
+    nav.head ul li:hover{
+    background-color: #FFF2CC;
+    }
+    
+/** ログイン・ログアウトボタン **/
+div.login{
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+div.login input{
+  border:1px solid #9ec34b;
+  color: #9ec34b;
+}
+
+div.login input:hover {
+  background-color: #9ec34b;
+  border-color: #cbe585;
+  color: #FFF;
+  cursor: pointer;
+}
+
+dl{
+    background: #eee;
+    padding: 10px;
+    width: 550px;
+    }
+dd{
+    color:#333;
+    margin-bottom:7px;
+}
+dt{
+    color: navy;
+    font-weight: bold;
+    padding:0 10px 0 0;
+    width: 120px;
+    float: left;
+    margin-bottom: 7px;
+}
+dl::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.Topics{
+    text-align: center;
+}
+li{
+    list-style: none;
+    display:inline-block;
+}
+.pav{
+    text-align: center;
+    padding-top: 40px;
+}
+.btn-icon {
+    display: inline-block;
+    max-width: 180px;
+    text-align: left;
+    border: 2px solid #9ec34b;
+    font-size: 16px;
+    color: #9ec34b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: .4s;
+}  
+.btn-icon:hover {
+    background-color: #9ec34b;
+    border-color: #cbe585;
+    color: #FFF;
+}
+
+
+#footer{
+    position: relative;
+    z-index: 2;
+  }
+small{
+    background:#333;
+    color:#fff;
+    display: block;
+    text-align: center;
+    padding:20px;
+    z-index: 20;
+  }
+
+
+/*========= ページトップのためのCSS ===============*/
+
+/*リンクの形状*/
+#page-top a{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background:#942D2F;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; 
+    text-decoration: none;
+    font-size:0.6rem;
+    transition:all 0.3s;
+    right: 10px;
+  }
+  
+  #page-top a:hover{
+    background: #777;
+  }
+  
+/*リンクを右下に固定*/
+#page-top {
+	position: fixed;
+	right: 10px;
+	bottom:10px;
+	z-index: 2;
+    /*はじめは非表示*/
+	opacity: 0;
+	transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(100px);
+  }
+}
+  
+  
+/*p{
+    text-align: center;
+}*/
+.explanation{
+    margin:2em 0;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+.explanation:before, .explanation:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+.explanation:before{
+    left: 10px;
+}
+.explanation:after{
+    right: 10px;
+}
+.explanation p{
+    margin: 0;
+    padding: 0;
+}
+.triangle-bottom {
+    display: inline-block;
+    border-style: solid;
+    border-width: 24px 14px 0 14px;
+    border-color: #9ec34b transparent transparent transparent;
+    z-index: 30;
+}
+
+/*========= particle js を描画するエリア設定 ===============*/
+
+canvas {
+    display: block;
+  }
+  #particles-js{ 
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: 98.8%;
+    height: 110%;
+    background-color: rgb(191, 253, 253);
+    top: -10px;
+  }
+  
+  #wrapper{
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width:100%;
+    height: 100%;
+    
+  }
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position:fixed;
+  z-index: 999;
+  /*ナビのスタート位置と形状*/
+top:0;
+  right: -20%;
+width:20%;
+  height: 100vh;/*ナビの高さ*/
+background:rgba(207, 255, 209, 0.747);
+  /*動き*/
+transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+  right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999; 
+  width: 20%;
+  height: 100vh;/*表示する高さ*/
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+  display: block;
+  list-style: none;
+  text-align: center;
+  overflow: hidden;
+  width: 80%;
+}
+#g-nav li:hover{
+  background-color: rgba(141, 247, 241, 0.74);
+}
+#g-nav li a{
+color: #333;
+text-decoration: none;
+padding:10px;
+display: block;
+letter-spacing: 0.1em;
+font-weight: bold;
+overflow: hidden;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1{
+position:fixed;
+  z-index: 9999;/*ボタンを最前面に*/
+top:5px;
+right: 10px;
+cursor: pointer;
+  width: 50px;
+  height:50px;
+}
+
+/*×に変化*/  
+.openbtn1 span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+background-color: #666;
+  width: 45%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+top:31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}

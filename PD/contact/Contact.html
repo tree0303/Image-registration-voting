@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>問い合わせ</title>
+    <link rel="stylesheet" href="../menustyle.css" >
+    <link rel="stylesheet" href="./Contact.css" >
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+  <div id="particles-js"></div>
+  <div id="wrapper">
+    <nav class="head">
+        <ul>
+        <li><a href="../home/home.php">ホーム</a></li>
+        <li><a href="../detail/index.html">コンテストについて</a></li>
+        <li><a href="../reference/reference.html">参考リンク集</a></li>
+        <li class="current"><a href="Contact.html">問い合わせ</a></li>
+        </ul>
+    </nav>
+    <div class="openbtn1"><span></span><span></span><span></span></div>
+        <nav id="g-nav">
+        <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールする-->
+        <ul>  
+        <li><a href="/home/home.php">ホーム</a></li>  
+        <li><a href="/detail/index.html">コンテストについて</a></li>  
+        <li><a href="/reference/reference.html">参考リンク集</a></li>  
+        <li><a href="/contact/Contact.html">問い合わせ</a></li>  
+        <li><a href="/public/register/imgregister.php">投稿</a></li> 
+        <li><a href="/public/vote/imgdisplay.php">投票</a></li> 
+        </ul>
+        </div>
+        </nav>
+    <div class="Form">
+      <form method="post" action="./AfterContact.html">
+        <div class="Form-Item">
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+          <input type="text" class="Form-Item-Input" placeholder="例）山田太郎">
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+          <input type="text" class="Form-Item-Input" placeholder="例）000-0000-0000">
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+          <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+          <textarea class="Form-Item-Textarea"></textarea>
+        </div>
+        <input type="submit" class="Form-Btn" value="送信する">
+      </form>  
+    </div>
+    
+  </div>
+  <footer id="footer">
+          <p id="page-top"><a href="#">Page Top</a></p> 
+      <small>&copy; copyright.</small>  
+  </footer>
+  
+  <script src="../js/app.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/pagetop.js"></script>
+  <script src="../js/nav.js"></script>
+</body>
+
+</html>

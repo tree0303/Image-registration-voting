@@ -1,0 +1,96 @@
+html { font-size: 62.5% }
+body{
+    text-align: center;
+}
+div.main label.ti{
+    font-size: 40rem;
+}
+img{
+    margin: 2rem;
+    width: 80%;
+    text-align: center;
+}
+div.main{
+    background-color: white;
+    border: 0.2rem solid springgreen;
+    border-radius: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60rem;
+    font-size: 2rem;
+    padding: 2rem;
+}
+form{
+    margin: 0;
+    padding: 0;
+}
+div.aa{
+    width: 50rem;
+}
+div{
+    margin: 0;
+    padding: 0;
+    width: 30rem;
+    text-align: center;
+    display: block;
+    
+}
+.btn1{
+    display: inline-block;
+    max-width: max-content;
+    text-align: center;
+    border: 0.2rem solid #9ec34b;
+    font-size: 1.6rem;
+    color: #9ec34b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 0.4rem;
+    transition: .4s;
+    position: relative;
+    left: 30%;
+    top: 1rem;
+}  
+
+.back{
+    display: block;
+    max-width: max-content;
+    text-align: center;
+    border: 0.2rem solid #9ec34b;
+    font-size: 1.6rem;
+    color: #9ec34b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 0.4rem;
+    transition: .4s;
+    position: relative;
+    left: 120%;
+    bottom: 3.8rem;
+}  
+.back:hover , .btn1:hover{
+    background-color: #9ec34b;
+    border-color: #cbe585;
+    color: #FFF;
+}
+/*========= particle js を描画するエリア設定 ===============*/
+
+canvas {
+    display: block;
+  }
+  #particles-js{ 
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: 98.8%;
+    height: 110%;
+    background-color: rgb(191, 253, 253);
+    top: -10px;
+  }
+  
+  #wrapper{
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width:100%;
+    height: 100%;
+    
+  }

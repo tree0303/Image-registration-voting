@@ -1,0 +1,131 @@
+body{
+    background-color: rgb(230, 230, 230);
+}
+.bg_test {
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    outline:0;
+}
+
+.btn1{
+    font-size :30px;
+    display: inline-block;
+    width: max-content;
+    text-align: left;
+    border: 2px solid #9ec34b;
+    color: #9ec34b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 32px;
+    border-radius: 4px;
+    transition: .4s;
+    height: auto;
+}
+.btn1:hover {
+    background-color: #9ec34b;
+    border-color: #cbe585;
+    color: #FFF;
+}
+
+legend{
+    font-size: 40px;
+    margin-top: 20px;
+}
+fieldset label.tagu{
+    display: block;
+    width: 250px;
+    font-size: 20px;
+    font-weight: 700;
+    color: brown;
+    float: left;
+    margin: 0;
+}
+fieldset label.must{
+    margin: 0;
+    background-color: red;
+    padding: auto;
+    border: black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(247, 213, 213);
+    color: beige;
+    font-weight: 400;
+}
+
+fieldset.img{
+    margin: 0;
+    border-radius: 40px;
+    background-color:rgb(230, 230, 230);
+    box-shadow: 0 0 5px #999;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font: optional;
+    line-height: 3;
+}
+
+fieldset p.err_message{
+    color: red;
+    margin: 0;
+    display: block;
+    margin-top: -5px;
+    transition: all 0.3s;
+    text-align: left;
+}
+
+fieldset input{
+    font-size: 15px;
+    text-align: left;
+    transition: all 0.3s;
+    overflow: auto;
+    width: 300px;
+    height: 30px;
+}
+div.div{
+    margin-right: 40px;
+    transition: all 0.3s;
+}
+div.div1{
+    margin-right: -85px;
+    transition: all 0.3s;
+}
+div.div2{
+    margin-right: 190px;
+    transition: all 0.3s;
+}
+select{
+    height: 30px;
+    width: 100px;
+}
+p {
+    opacity: 0.8;
+}
+hr{
+    margin: 5px;
+}
+/*========= particle js を描画するエリア設定 ===============*/
+
+canvas {
+    display: block;
+  }
+  #particles-js{ 
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: 98.8%;
+    height: 110%;
+    background-color: rgb(191, 253, 253);
+    top: -10px;
+  }
+  
+  #wrapper{
+    position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width:100%;
+    height: 100%;
+    
+  }
